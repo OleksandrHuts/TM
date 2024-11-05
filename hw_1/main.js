@@ -28,16 +28,21 @@ let count = memory / 820;
 alert(parseInt(count));*/
 
 //6//
-let money = +prompt('How much money do you have?');
-let price = +prompt('Enter the price of chocolate');
+// let money = +prompt('How much money do you have?');
+// let price = +prompt('Enter the price of chocolate');
 
-let count = parseInt(money / price);
-alert(count);
+// let count = parseInt(money / price);
+// alert(count);
 
-let a = money - (price * count);
-alert(a);
+// let a = money - (price * count);
+// alert(a);
 
 //7//
 /*let sumDeposit = prompt('Enter the deposit amount');
 let count = (sumDeposit * 2) * 0.05;
 alert(count);*/
+
+
+// number, boolean -> string : x.toString();
+// string, boolean - > number : parseInt(x) or +x (parseInt dosnt work with boolean);
+// string, number -> boolean : Boolean(x)
