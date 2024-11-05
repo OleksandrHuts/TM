@@ -1,11 +1,17 @@
 //1//
-/*let userName = prompt("Whot is your name?");
-alert( `Hello ${userName}` );*/
+// let userName = prompt("Whot is your name?");
+// alert( `Hello ${userName}` );
 
 //2//
-/*let age = prompt("When were you born?");
-const nowYear = 2024;
-alert( nowYear- age);*/
+// let birthYear = parseInt(prompt("When were you born?"));
+// const nowYear = 2024;
+
+// if(birthYear < 1900 || birthYear > nowYear || isNaN(birthYear)) {
+//     alert('Please, add proper data!')
+// } else {
+//     alert( nowYear - birthYear);
+// }
+
 
 //3//
 /*let sideSquare = prompt('Enter the length of the side of the square');
@@ -22,11 +28,12 @@ let count = memory / 820;
 alert(parseInt(count));*/
 
 //6//
-let money = prompt('How much money do you have?');
-let price = prompt('Enter the price of chocolate');
+let money = +prompt('How much money do you have?');
+let price = +prompt('Enter the price of chocolate');
 
-let count = money / price;
-alert(parseInt(count));
+let count = parseInt(money / price);
+alert(count);
+
 let a = money - (price * count);
 alert(a);
 
