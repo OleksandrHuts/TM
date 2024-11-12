@@ -20,10 +20,10 @@
 //2//
 // let sum = prompt('Enter yuor sum');
 
-// let currency = prompt('Enter yuor currency');
-// const valUSD = 41;
-// const valEUR = 44;
-// const valPLN = 10;
+let currency = prompt('Enter yuor currency');
+const valUSD = 41;
+const valEUR = 44;
+const valPLN = 10;
 
 
 // if(!isNaN(sum) && isNaN(currency)) {
