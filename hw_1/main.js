@@ -34,7 +34,7 @@ alert(parseInt(count));*/
 // let count = parseInt(money / price);
 // alert(count);
 
-// let a = money - (price * count);
+// let a = money % price;
 // alert(a);
 
 //7//
