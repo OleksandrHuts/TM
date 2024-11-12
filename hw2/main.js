@@ -20,7 +20,7 @@ if(a == b || a == c || b == c) {
 let sum = prompt('Enter yuor sum');
 
 let currency = prompt('Enter yuor currency');
-const valUSD =41;
+const valUSD = 41;
 const valEUR = 44;
 const valPLN = 10;
 
