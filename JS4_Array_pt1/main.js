@@ -1,4 +1,7 @@
 const arr = [1, 4, 34, 23, 5, 654, 3, 23, 445, 87, 6, 5, 3, 7, 16];
+
+//!4 = 1*2*3*4
+
 const arrSimple = [];
 
 for (let i = 0; i < arr.length; i++) {
@@ -16,7 +19,7 @@ for (let i = 0; i < arr.length; i++) {
     }
 }
 
-console.log(arrSimple);
+//console.log(arrSimple);
 
 
 //Add/remove element from array:
