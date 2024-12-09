@@ -5,11 +5,14 @@ const time = {
     showTime: function (hours, minutes, seconds) {
         console.log(`${this.hours} : ${this.minutes} : ${this.seconds}`)
     }
-}
 
-changeMinutes: function(time) {
-    let minute = 
-}
 
+    changeSeconds: function(hours) {
+    const allSecondc = this.hours * 3600 + this.minutes * 60 + this.seconds;
+}
+    chahgeMinutes: function(minutes) {
+        const allMinutes = this.hours * 60 + this.minutes + this.seconds / 60;
+    }
+}
 
 
