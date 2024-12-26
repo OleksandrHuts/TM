@@ -1,0 +1,32 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button {
+    height: 140px;
+    width: 300px;
+    background-color: red;
+    color: black;
+    margin-top: 200px;
+    margin-left: 200px;
+    font-size: 24px;
+}
+
+.modal_window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    background-color: grey ;
+    border: 2px solid black;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+
+.modal_window.open {
+    display: block;
+}

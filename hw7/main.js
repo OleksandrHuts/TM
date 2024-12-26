@@ -23,20 +23,29 @@ const groceriesList = [
     }
 ]
 
-function dispayGroceries() {
-    groceriesList.sort((a, b) => {
-        return a.bought - b.bought
-    })
-    groceriesList.forEach((element) => console.log(element));
-}
-dispayGroceries();
+// 1. Створюємо ф, яка виводить всі елементи масиву
+// 2. Робимо сортування масиву
+// 3. Створити ф, яка шукає індекс кожного продукту
+// 4. Перевірити чи є продукт: додати кількість, якщо не має: додати новий об"єкт
 
-function addItem(productName, amount) {
-let product = groceriesList.find(element => element.name === productName);
-if(product) {
-    groceriesList.amount = groceriesList.amount + amount
-} else {
-    groceriesList.push(productName, amount)
+function newArray() {
+
+    groceriesList.sort((a, b) => a.bought - b.bought);
+    
+    groceriesList.forEach(el => console.log(el));
 }
+
+function addItem(produktName, amount) {
+    const newIndex = groceriesList.findIndex(el => el.name === produktName) 
+        if(newIndex >= 0) {
+            groceriesList[newIndex].amount = groceriesList[newIndex].amount + amount;
+        }else {
+            const newObject = {
+                name: produktName,
+                amount,
+                bought: false
+            }
+            groceriesList.push(newObject);
+        }
+    
 }
-addItem('apple', 2);

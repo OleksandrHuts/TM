@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 1800px; 
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+   }
+.section-header {
+    background-image: url(picture/image1.png);
+    width: 1770px;
+    height: 820px;
+}
+h1 {
+    padding-top: 264px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 54.167% */
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+}
+.section-header_text {
+    padding-top: 10px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 118.182% */
+    letter-spacing: 6.82px;
+    opacity: 0.7;
+}
+#find_now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
+}
+.input {
+    width: 503px;
+    height: 63px;
+    display: flex;
+}
+input[type="search"]::placeholder {
+    color: #999;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
+    letter-spacing: 2.8px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 153px;
+    height: 63px;
+    background-color: #5474FD;
+    border: #FFF;
+    color: #FFF;
+    text-align: center;
+    font-family: Aleo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+.button_svg {
+    width: 22px;
+    height: 24px;
+    padding-left: 12px;
+  }
+.section-header_box {
+    text-align: center;
+    padding-top: 107px;
+    padding-bottom: 142px;
+    opacity: 0.7;
+  }
+.section-header_scroll {
+    color: #FFF;
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
+    letter-spacing: 2.8px;
+  }
+.section-header_svg {
+    width: 17px;
+    height: 11px;
+  }
+  .section-nav {
+    width: 1773px;
+    height: 83px;
+    background-color: #5474FD;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .section-nav_text {
+    color: #FFF;
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 108.333% */
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+nav ul a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Aleo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
+    text-transform: uppercase;
+}
+.section-about-us {
+    width: 1770px;
+    height: 685px;
+    background-image: url(picture/image2.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-about-us_disription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; 
+}
+h2 {
+    width: 288px;
+    color: #FFF;
+    font-family: Aleo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 72.222% */
+    padding-bottom: 50px;
+    opacity: 0.7;
+}
+.section-about-us_disription__text {
+    width: 560px;
+    color: #E8E8E8;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: 1.6px;
+    padding-bottom: 45px;
+    opacity: 0.7;
+    }
+.section-about-us_disription__button {
+    width: 228px;
+    height: 63px;
+    background-color: #5474FD;
+    color: #FFF;
+    font-family: Aleo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    opacity: 0.9;
+      }
+.section-about-us_picture {
+    position: relative;
+      }
+.section-about-us_picture__hause {
+    position: relative;
+    padding-left: 90px;
+    bottom: 140px;
+
+}
+.section-about-us_picture__mauntines {
+    position: absolute;
+    top: 90px;
+    right: -80px;
+}
+.section-steps {
+    width: 1773px;
+    height: 340px;
+    background-color: #333;
+}
+.section-steps_picture {
+    padding-top: 50px;
+    text-align: center;  
+}
+.section-steps_picture_small {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -25px;
+    }
+.section-steps_picture_small svg {
+    background-color: #333;
+}
+.section-steps_text {
+    display: flex;
+    justify-content: space-evenly;
+}
+.section-steps_text p {
+    color: #E8E8E8;
+    text-align: center;
+    font-family: Aleo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 72.222% */
+    padding-top: 40px;
+}
+.section-booking-left {
+    width: 1770px;
+    height: 700px;
+    background-image: url(picture/image5.png);
+    padding-top: 227px;
+    padding-left: 328px;
+}
+.section-booking-left__content {
+    width: 543px;
+    height: 374px;
+    background-color: #232323;
+    opacity: 0.9;
+    padding-left: 32px;
+    padding-top: 49px;
+   }
+.section-booking-left__spain, .section-booking-right__spain {
+    color: #E8E8E8;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 130% */
+    letter-spacing: 1.5px;
+    padding-bottom: 23px;
+}
+.section-booking-left__h3, .section-booking-right__h3 {
+    color: #FFF;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 130% */
+    text-transform: uppercase;
+    padding-bottom: 23px;
+}
+.section-booking-left__text, .section-booking-right__text {
+    color: #E8E8E8;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    padding-bottom: 46px;
+}
+.section-booking-left__button, .section-booking-right__button {
+    width: 228px;
+    height: 63px;
+    background-color: #5474FD;
+    color: #FFF;
+    font-family: Aleo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+.section-booking-right {
+    width: 1770px;
+    height: 700px;
+    background-image: url(picture/image6.png);
+    padding-top: 227px;
+    padding-left: 898px;
+}
+.section-booking-right__content {
+    width: 543px;
+    height: 374px;
+    background-color: #232323;
+    opacity: 0.9;
+    padding-left: 32px;
+    padding-top: 49px;
+   }
+.reviews {
+    width: 1770px;
+    height: 731px;
+    background-image: url(picture/image7.png);
+}
+.reviews_h4 {
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Aleo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 72.222% */
+    padding-top: 128px;
+    padding-bottom: 93px;
+}
+.reviews_content {
+    display: flex;
+    justify-content: center;
+}
+.reviews_content__box {
+    width: 668px;
+    height: 287px;
+   }
+.reviews_h5 {
+    color: #FEFEFE;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 130% */
+    text-transform: uppercase;
+    padding-left: 62px;
+    padding-top: 49px;
+}
+.reviews_content_text {
+    color: #E8E8E8;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    padding-left: 62px;
+    padding-top: 20px;
+}
+span {
+    color: #5474FD;
+    font-family: FontAwesome;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 72.222% */
+}
+.footer {
+    width: 1770px;
+    height: 271px; 
+    background-color: #232323;
+    text-align: center;
+}
+.footer_h6 {
+    color: #FFF;
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 108.333% */
+    letter-spacing: 3.36px;
+    text-transform: uppercase;
+    padding-top: 122px;
+}
+.footer_text {
+    color: #FFF;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: 1.6px;
+    padding-top: 10px;
+}
+.footer_social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 23px;
+}
