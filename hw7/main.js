@@ -3,7 +3,6 @@ const groceriesList = [
         name: 'poteto',
         amount: 2,
         bought: true,
-        
     },
     {
         name: 'apple',
@@ -15,7 +14,6 @@ const groceriesList = [
         amount: 5,
         bought: false,
     },
-    
     {
         name: 'banana',
         amount: 1,
@@ -23,6 +21,7 @@ const groceriesList = [
     }
 ]
 
+<<<<<<< HEAD
 // 1. Створюємо ф, яка виводить всі елементи масиву
 // 2. Робимо сортування масиву
 // 3. Створити ф, яка шукає індекс кожного продукту
@@ -49,3 +48,30 @@ function addItem(produktName, amount) {
         }
     
 }
+=======
+function dispayGroceries() {
+    groceriesList.sort((a, b) => {
+        return a.bought - b.bought
+    })
+    //groceriesList.forEach((element) => console.log(element));
+    console.log(groceriesList);
+    
+}
+//dispayGroceries();
+
+function addItem(productName, amount) {
+    let productIndex = groceriesList.findIndex(element => element.name === productName);
+    
+    if (productIndex >= 0) {
+        groceriesList[productIndex].amount = groceriesList[productIndex].amount + amount
+    } else {
+        const newProduct = {
+            name: productName,
+            amount,
+            bought: false
+        }
+        groceriesList.push(newProduct)
+    }
+}
+addItem('plum', 2);
+>>>>>>> c68d138daecaa8e82e022fb0f40d63f5e9f1339f

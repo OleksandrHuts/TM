@@ -11,7 +11,11 @@
 // console.log(arrNum.find((el) => el > 10 && el < 100));
 // arr.forEach((el, i) => {
 //     console.log(`Element number ${i+1}: `, el);
-// })
+// });
+//splice
+// cart.splice(2,1, 'new val') -> replace 1 element with a new one at index 2
+// cart.splice(2, 0, 'new val') -> add new val at index 2
+// cart.splice(2,1) -> remove element at index 2
 var cart = [{
   productName: 'potato',
   price: 20,
@@ -33,8 +37,18 @@ var cart = [{
   price: 400,
   type: 'red/dry',
   isDiscount: true
-}]; //get all potato items
+}, {
+  productName: 'Tea',
+  price: 80,
+  type: 'black',
+  isDiscount: true
+}];
 
+var removeItem = function removeItem(productName) {
+  cart.splice(2, 1);
+};
+
+removeItem('vine');
 var filteredProductsArray = cart.filter(function (el) {
   return el.isDiscount;
 });
@@ -53,14 +67,3 @@ function generateList() {
 }
 
 generateList();
-var groceriesList = [{
-  name: 'potato',
-  amount: 0,
-  bought: false
-}];
-
-function addItem(name, amount) {//if product is already there
-  // amount = old val + amount
-  // if no shuch product
-  // push
-}

@@ -13,7 +13,12 @@
 
 // arr.forEach((el, i) => {
 //     console.log(`Element number ${i+1}: `, el);
-// })
+// });
+
+//splice
+// cart.splice(2,1, 'new val') -> replace 1 element with a new one at index 2
+// cart.splice(2, 0, 'new val') -> add new val at index 2
+// cart.splice(2,1) -> remove element at index 2
 
 
 const cart = [
@@ -41,9 +46,27 @@ const cart = [
         price: 400,
         type: 'red/dry',
         isDiscount: true
+    },
+    {
+        productName: 'Tea',
+        price: 80,
+        type: 'black',
+        isDiscount: true
     }
 ]
-//get all potato items
+
+
+const removeItem = function(name) {
+    const index = cart.findIndex(el => el.productName.toLowerCase() === name.toLowerCase());
+    if(index < 0) {
+        return false;
+    }
+
+    cart.splice(index, 1);
+    generateList();
+}
+
+//removeItem('vine');
 
 const filteredProductsArray = cart.filter(el => el.isDiscount);
 
@@ -68,18 +91,8 @@ function generateList() {
 generateList();
 
 
-const groceriesList = [
-    {
-        name: 'potato',
-        amount: 0,
-        bought: false
-    }
-]
+//map
 
-function addItem(name, amount) {
-    //if product is already there
-    // amount = old val + amount
-
-    // if no shuch product
-    // push
-}
+// const newArr = cart.map(el => {
+//     return el;
+// })
