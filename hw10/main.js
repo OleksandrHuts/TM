@@ -1,53 +1,47 @@
 
 var playList = [
     {
-     author: "LED ZEPPELIN",
-     song:"STAIRWAY TO HEAVEN"
+        author: "LED ZEPPELIN",
+        song: "STAIRWAY TO HEAVEN"
     },
     {
-     author: "QUEEN",
-     song:"BOHEMIAN RHAPSODY"
+        author: "QUEEN",
+        song: "BOHEMIAN RHAPSODY"
     },
     {
-     author: "LYNYRD SKYNYRD",
-     song:"FREE BIRD"
+        author: "LYNYRD SKYNYRD",
+        song: "FREE BIRD"
     },
     {
-     author: "DEEP PURPLE",
-     song:"SMOKE ON THE WATER"
+        author: "DEEP PURPLE",
+        song: "SMOKE ON THE WATER"
     },
     {
-     author: "JIMI HENDRIX",
-     song:"ALL ALONG THE WATCHTOWER"
+        author: "JIMI HENDRIX",
+        song: "ALL ALONG THE WATCHTOWER"
     },
     {
-     author: "AC/DC",
-     song:"BACK IN BLACK"
+        author: "AC/DC",
+        song: "BACK IN BLACK"
     },
     {
-     author: "QUEEN",
-     song:"WE WILL ROCK YOU"
+        author: "QUEEN",
+        song: "WE WILL ROCK YOU"
     },
     {
-     author: "METALLICA",
-     song:"ENTER SANDMAN"
+        author: "METALLICA",
+        song: "ENTER SANDMAN"
     }
-    ];
+];
 
 
 
 function winModal() {
     const modal = document.querySelector('.modal_window');
-    if(modal) {
+    if (modal) {
         modal.classList.toggle('open');
     }
 }
-
-const button = document.querySelector('#button_show');
-button.addEventListener('click', ()=> {
-    winModal(); 
-    addContent();
-});
 
 function addContent() {
     const content = document.querySelector('.content');
@@ -57,4 +51,12 @@ function addContent() {
     });
     content.innerHTML = arr;
 }
+
+const button = document.querySelector('#button_show');
+button.addEventListener('click', () => {
+    winModal();
+    addContent();
+});
+
+
 

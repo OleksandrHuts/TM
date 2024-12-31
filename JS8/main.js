@@ -11,19 +11,12 @@
 
 // отримання інформації про елемент
 // textContent
+// innerHTML
 
 
 // змінити сам елемент чи його дочірні елементи
 // створити елемент
 // додавання подій
-
-const modal = document.querySelector('.modal_window');
-
-function toggleModal() {
-    if (modal) {
-        modal.classList.toggle('open');
-    }
-}
 
 const cart = [
     {
@@ -57,30 +50,64 @@ const cart = [
         type: 'black',
         isDiscount: true
     }
-]
+];
 
-function renderCart() {
-    const content = modal.querySelector('.content');
-    let acc = '';
+function CE(tag, text, className, id) {
+    const el = document.createElement(tag);
+    if(className) el.className = className;
+    if(id) el.setAttribute('id', id);
+    if(text) el.textContent = text;
 
-    cart.forEach(product => {
-        acc = acc + `<div>Product: ${product.productName}, price: ${product.price}</div>`
-    });
-
-    content.innerHTML = acc;
+    return el;
 }
 
-//const button = document.getElementById('modalShow');
-//const button = window.modalShow;
-const button = document.querySelector('#modalShow');
-button.addEventListener('click', ()=> {
-    toggleModal();
-    renderCart();
-});
+function generateCart() {
+    const cartContainer = document.querySelector('.cart');
 
-const closeBtn = modal.querySelector('.close_modal');
-closeBtn.addEventListener('click', ()=> {
-    if (modal) {
-        modal.classList.remove('open')
-    }
-});
+    cart.forEach(product => {
+        const {productName, price, type} = product;
+        
+        const priceEl = CE('span', price, 'price');
+        const nameEl = CE('span', productName, 'name');
+        const typeEl = CE('span', type, 'type');
+        const row = CE('div', '', 'product_row');
+
+        row.append(nameEl);
+        row.append(priceEl);
+        row.append(typeEl);
+
+        cartContainer.append(row);
+    })
+}
+
+function generateHeaders() {
+    const headers = [
+        {
+            title: 'Name',
+            id: 'productName'
+        },
+        {
+            title: 'Price',
+            id: 'price'
+        },
+        {
+            title: 'Type',
+            id: 'type'
+        },
+    ];
+
+    const cartHeading = document.querySelector('.cart_heading');
+    headers.forEach(heading => {
+        const el = CE('button', heading.title, 'cart_header_button');
+        el.addEventListener('click', () => {
+            console.log('dont be afraid of JS!!');
+        })
+        cartHeading.append(el);
+    })
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    generateHeaders();
+    generateCart();
+})
