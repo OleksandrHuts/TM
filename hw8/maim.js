@@ -38,4 +38,70 @@ const time = {
     }
 }
 
+//window.location.href = 'https://google.com'
 
+// setTimeout(() => {
+//     console.log('5 секунд минуло');
+// }, 5000)
+
+// let seconds = 0;
+
+// setInterval(() => {
+//     console.log(`Минуло ${seconds} секунд`);
+//     seconds++;
+// }, 1000);
+
+
+// const container = document.createElement('div');
+// container.classList.add('container');
+// container.textContent = "I'm container";
+
+// const target = document.querySelector('.target');
+
+// target.prepend(container);
+
+const groceriesList = [
+    {
+        name: 'potato',
+        amount: 2,
+        pricePerItem: 40
+    },
+    {
+        name: 'apple',
+        amount: 3,
+        pricePerItem: 60
+    },
+    {
+        name: 'water',
+        amount: 5,
+        pricePerItem: 10
+    },
+    {
+        name: 'banana',
+        amount: 1,
+        pricePerItem: 90
+    }
+]
+
+function printReceipt() {
+    groceriesList.forEach(product => {
+        console.log(`Name: ${product.name}, Price per item: ${product.pricePerItem}, Total: ${product.pricePerItem * product.amount}`);
+    })
+}
+
+function calculateTotal() {
+    let total = 0;
+    groceriesList.forEach(product => {
+        total = total + (product.pricePerItem * product.amount);
+    });
+
+    return total;
+}
+
+function findMostExpensive() {
+    groceriesList.sort((a, b) => {
+        return b.pricePerItem - a.pricePerItem;
+    });
+
+   return groceriesList[0]
+}
