@@ -319,7 +319,6 @@
   body {
     font-family: "Poppins", sans-serif;
     color: #544837;
-    font-size: 0;
   }
   
   a {
@@ -470,4 +469,37 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+  }
+
+  .cart {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid lightgrey;
+  }
+
+  .cart h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .product_row, .cart_heading {
+    padding: 15px 10px;
+    border-bottom: 1px solid lightgrey;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart_heading button {
+    cursor: pointer;
+    display: inline-block;
+    width: 33%;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .product_row span {
+    display: inline-block;
+    width: 33%;
   }

@@ -10,17 +10,10 @@
 // getAttribute/setAttribute/removeAttribute
 // отримання інформації про елемент
 // textContent
+// innerHTML
 // змінити сам елемент чи його дочірні елементи
 // створити елемент
 // додавання подій
-var modal = document.querySelector('.modal_window');
-
-function toggleModal() {
-  if (modal) {
-    modal.classList.toggle('open');
-  }
-}
-
 var cart = [{
   productName: 'potato',
   price: 20,
@@ -49,25 +42,53 @@ var cart = [{
   isDiscount: true
 }];
 
-function renderCart() {
-  var content = modal.querySelector('.content');
-  var acc = '';
+function CE(tag, text, className, id) {
+  var el = document.createElement(tag);
+  if (className) el.className = className;
+  if (id) el.setAttribute('id', id);
+  if (text) el.textContent = text;
+  return el;
+}
+
+function generateCart() {
+  var cartContainer = document.querySelector('.cart');
   cart.forEach(function (product) {
-    acc = acc + "<div>Product: ".concat(product.productName, ", price: ").concat(product.price, "</div>");
+    var productName = product.productName,
+        price = product.price,
+        type = product.type;
+    var priceEl = CE('span', price, 'price');
+    var nameEl = CE('span', productName, 'name');
+    var typeEl = CE('span', type, 'type');
+    var row = CE('div', '', 'product_row');
+    row.append(nameEl);
+    row.append(priceEl);
+    row.append(typeEl);
+    cartContainer.append(row);
   });
-  content.innerHTML = acc;
-} //const button = document.getElementById('modalShow');
-//const button = window.modalShow;
+}
 
+function generateHeaders() {
+  var headers = [{
+    title: 'Name',
+    id: 'productName'
+  }, {
+    title: 'Price',
+    id: 'price'
+  }, {
+    title: 'Type',
+    id: 'type'
+  }];
+  var cartHeading = document.querySelector('.cart_heading');
+  headers.forEach(function (heading) {
+    var el = CE('button', heading.title, 'cart_header_button');
+    el.addEventListener('click', function () {
+      console.log('dont be afraid of JS!!');
+    });
+    cartHeading.append(el);
+  });
+}
 
-var button = document.querySelector('#modalShow');
-button.addEventListener('click', function () {
-  toggleModal();
-  renderCart();
-});
-var closeBtn = modal.querySelector('.close_modal');
-closeBtn.addEventListener('click', function () {
-  if (modal) {
-    modal.classList.remove('open');
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  generateHeaders();
+  generateCart();
 });
