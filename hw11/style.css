@@ -1,0 +1,32 @@
+.user_cart {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid lightgray;
+}
+
+.user_cart h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.user_row,
+.user_heading {
+    padding: 15px 10px;
+    border-bottom: 1px solid lightgray;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_row span {
+    display: inline-block;
+    width: 33%;
+}
+.user_heading button {
+    cursor: pointer;
+    display: inline-block;
+    width: 33%;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: left;
+}
