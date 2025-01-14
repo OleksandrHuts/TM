@@ -40,14 +40,16 @@ function CE(tag, taxt, className, id) {
 }
 
 function generateCart() {
-    const userCart = document.querySelector('.user_cart');
+    const userCart = document.querySelector('.user_content');
+userCart.innerHTML = '';
+
     users.forEach(element => {
-        const {name, email, adress, phone} = element;
-       // const text = `${name}, ${email}, ${adress}, ${phone}`
-       const nameEl = CE('span', name, '.name');
-       const emailEl = CE('span', email, 'email');
-       const adressEl = CE('span', adress, 'adress');
-       const phoneEl = CE('span', phone, 'phone');
+        const { name, email, adress, phone } = element;
+        // const text = `${name}, ${email}, ${adress}, ${phone}`
+        const nameEl = CE('span', name, '.name');
+        const emailEl = CE('span', email, 'email');
+        const adressEl = CE('span', adress, 'adress');
+        const phoneEl = CE('span', phone, 'phone');
         const row = CE('div', '', 'user_row');
         row.append(nameEl);
         row.append(emailEl);
@@ -60,31 +62,61 @@ function generateHeaders() {
     const headers = [
         {
             title: 'Name',
-            id: 'nameId'
+            id: 'nameId',
+            dataType: 'string'
         },
         {
             title: 'Email',
-            id: 'emailId'
+            id: 'emailId',
+            dataType: 'string'
         },
         {
             title: 'Adress',
-            id: 'adressId'
+            id: 'adressId',
+            dataType: 'string'
         },
         {
             title: 'Phone',
-            id: 'phoneId'
+            id: 'phoneId',
+            dataType: 'number'
         },
     ];
     const userHeading = document.querySelector('.user_heading');
     headers.forEach(heading => {
         const el = CE('button', heading.title, 'user_header_button');
-        el.addEventListener('click', () => {
-            
+        el.setAttribute('data-id', heading.id);
+        el.setAttribute('data-type', heading.dataType);
+        el.addEventListener('click', (event) => {
+            const dataId = event.target.getAttribute('data-id');
+            const dataType = event.target.getAttribute('data-type');
+            sortCart(dataId, dataType);
         })
         userHeading.append(el);
     })
 }
 
+function sortCart(fildName, fildType) {
+    if(fildType === 'number') {
+users.sort((a, b) => {
+        return b.[fildName] - [a.fildName]
+     });
+    }else {
+        users.sort((a, b)=> {
+            const nameA = a.name.toUpperCase();
+            const nameB = b.name.toUpperCase();
+            if(nameA < nameB) {
+                return -1;
+            }
+            if(nameA > nsmeB) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+    
+  
+    generateCart();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     generateHeaders()
