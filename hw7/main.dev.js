@@ -16,32 +16,33 @@ var groceriesList = [{
   name: 'banana',
   amount: 1,
   bought: true
-}];
+}]; // 1. Створюємо ф, яка виводить всі елементи масиву
+// 2. Робимо сортування масиву
+// 3. Створити ф, яка шукає індекс кожного продукту
+// 4. Перевірити чи є продукт: додати кількість, якщо не має: додати новий об"єкт
 
-function dispayGroceries() {
+function newArray() {
   groceriesList.sort(function (a, b) {
     return a.bought - b.bought;
-  }); //groceriesList.forEach((element) => console.log(element));
+  });
+  groceriesList.forEach(function (el) {
+    return console.log(el);
+  });
+}
 
-  console.log(groceriesList);
-} //dispayGroceries();
-
-
-function addItem(productName, amount) {
-  var productIndex = groceriesList.findIndex(function (element) {
-    return element.name === productName;
+function addItem(produktName, amount) {
+  var newIndex = groceriesList.findIndex(function (el) {
+    return el.name === produktName;
   });
 
-  if (productIndex >= 0) {
-    groceriesList[productIndex].amount = groceriesList[productIndex].amount + amount;
+  if (newIndex >= 0) {
+    groceriesList[newIndex].amount = groceriesList[newIndex].amount + amount;
   } else {
-    var newProduct = {
-      name: productName,
+    var newObject = {
+      name: produktName,
       amount: amount,
       bought: false
     };
-    groceriesList.push(newProduct);
+    groceriesList.push(newObject);
   }
 }
-
-addItem('plum', 2);

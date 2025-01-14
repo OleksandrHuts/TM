@@ -33,7 +33,7 @@ const users = [
 
 function CE(tag, taxt, className, id) {
     const el = document.createElement(tag);
-    if (taxt) el.text = taxt;
+    if (taxt) el.textContent = taxt;
     if (className) el.className = className;
     if (id) el.setAttribute('id', id);
     return el;
@@ -41,7 +41,7 @@ function CE(tag, taxt, className, id) {
 
 function generateCart() {
     const userCart = document.querySelector('.user_content');
-userCart.innerHTML = '';
+    userCart.innerHTML = '';
 
     users.forEach(element => {
         const { name, email, adress, phone } = element;
@@ -96,25 +96,25 @@ function generateHeaders() {
 }
 
 function sortCart(fildName, fildType) {
-    if(fildType === 'number') {
-users.sort((a, b) => {
-        return b.[fildName] - [a.fildName]
-     });
-    }else {
-        users.sort((a, b)=> {
+    if (fildType === 'number') {
+        users.sort((a, b) => {
+            return b[fildName] - a[fildName]
+        });
+    } else {
+        users.sort((a, b) => {
             const nameA = a.name.toUpperCase();
             const nameB = b.name.toUpperCase();
-            if(nameA < nameB) {
+            if (nameA < nameB) {
                 return -1;
             }
-            if(nameA > nsmeB) {
+            if (nameA > nsmeB) {
                 return 1;
             }
             return 0;
         });
     }
-    
-  
+
+
     generateCart();
 }
 
