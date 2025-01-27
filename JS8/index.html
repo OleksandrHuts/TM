@@ -12,7 +12,16 @@
 <body>
     <!-- MODAL -->
     <div class="modal_window">
-        <div class="content"></div>
+        <div class="content">
+            <label for="product-name">Name:</label>
+            <input type="text" name="product-name" id="product-name">
+            <label for="product-price">Price:</label>
+            <input type="text" name="product-price" id="product-price">
+            <label for="product-is-discount">Is discounted:</label>
+            <input type="checkbox" name="product-is-discount" id="product-is-discount">
+
+            <button class="save">Save</button>
+        </div>
         <button class="close_modal">x</button>
     </div>
     <div class="page_wrapper">
@@ -23,7 +32,10 @@
             <div class="hero_container">
                 <div class="cart">
                     <h2>Your cart</h2>
-                    <div class="cart_heading"></div>
+                    <div class="cart_heading">
+                        <button class="cart_header_button">Actions</button>
+                    </div>
+                    <div class="cart_content"></div>
                 </div>
             </div>
         </section>

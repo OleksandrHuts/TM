@@ -41,7 +41,7 @@ function CE(tag, taxt, className, id) {
 
 function generateCart() {
     const userCart = document.querySelector('.user_content');
-userCart.innerHTML = '';
+    userCart.innerHTML = '';
 
     users.forEach(element => {
         const { name, email, adress, phone } = element;
@@ -96,25 +96,34 @@ function generateHeaders() {
 }
 
 function sortCart(fildName, fildType) {
+<<<<<<< HEAD
     if(fildType === 'number') {
 users.sort((a, b) => {
         return b[fildName] - a[fildName]
      });
     }else {
         users.sort((a, b)=> {
+=======
+    if (fildType === 'number') {
+        users.sort((a, b) => {
+            return b[fildName] - a[fildName]
+        });
+    } else {
+        users.sort((a, b) => {
+>>>>>>> 6a0f62589c10f5dba9ffad11e48912d8f01543fb
             const nameA = a.name.toUpperCase();
             const nameB = b.name.toUpperCase();
-            if(nameA < nameB) {
+            if (nameA < nameB) {
                 return -1;
             }
-            if(nameA > nsmeB) {
+            if (nameA > nsmeB) {
                 return 1;
             }
             return 0;
         });
     }
-    
-  
+
+
     generateCart();
 }
 
