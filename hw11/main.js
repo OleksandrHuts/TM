@@ -33,7 +33,7 @@ const users = [
 
 function CE(tag, taxt, className, id) {
     const el = document.createElement(tag);
-    if (taxt) el.text = taxt;
+    if (taxt) el.textContent = taxt;
     if (className) el.className = className;
     if (id) el.setAttribute('id', id);
     return el;
@@ -98,7 +98,7 @@ function generateHeaders() {
 function sortCart(fildName, fildType) {
     if(fildType === 'number') {
 users.sort((a, b) => {
-        return b.[fildName] - [a.fildName]
+        return b[fildName] - a[fildName]
      });
     }else {
         users.sort((a, b)=> {
