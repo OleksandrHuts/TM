@@ -3,7 +3,7 @@
 // }
 
 // document.querySelector("button").addEventListener('click', firmHandler);
-const par = document.getElementsByClassName("paragraf");
+const par = document.querySelector(".paragraf");
 document.addEventListener("keydown", (event) => {
    if(event.ctrlKey && event.code === "KeyH") {
     event.preventDefault();
