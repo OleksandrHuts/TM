@@ -26,19 +26,24 @@ document.addEventListener("keydown", (event) => {
 
 let startX = 0;
 let endX = 0;
+let startY = 0;
+let endY = 0;
 const box = document.querySelector('.box');
 
 document.querySelector('.drag').addEventListener('dragstart', event => {
     console.log(event);
     startX = event.clientX;
+    startY = event.clientY;
 });
 
 document.querySelector('.drag').addEventListener('dragend', event => {
     console.log(event);
     endX = event.clientX;
-
+    endY = event.clientY;
     console.log('Difference:', endX - startX);
     const currentBoxWidth = box.offsetWidth;
+    const currentBoxHeight = box.offsetHeight;
 
     box.style.width = currentBoxWidth + endX - startX + 'px';
+    box.style.height = currentBoxHeight + endY - startY + 'px';
 })
