@@ -15,7 +15,7 @@ class Rectangle {
                 background-color: ${this.color};
                 position: absolute;
                 left: ${this.left}px;
-                top: ${this.top}px;
+                top: ${this.top}px;0
             "></div>
             `);
     }
