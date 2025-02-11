@@ -66,3 +66,78 @@ function generateGrid(movies) {
 // pending -> виконується. в процессі.
 // fullfilled -> виконаний, повертає данні
 // rejected -> помилка
+
+
+// this
+// function() {}
+// () => {}
+
+// 1
+const aa = {
+    fName: 'Oleg',
+    lName: 'Agapov',
+    fullName: function() {
+        return this.fName + " " + this.lName
+    }
+}
+
+// 2
+function human(name) {
+    //const this = {}
+    this.name = name;
+    this.role = 'admin'
+}
+
+// 3
+function hello() {
+    console.log(this);
+}
+
+//4 
+document.querySelector('.click-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log(this.textContent);
+});
+
+// call, apply
+
+const user = {name: 'Alice'};
+
+function greet() {
+    console.log(`Hello ${this.name}`);
+}
+
+const aliceGreet = greet.bind(user);
+
+// closure-замикання
+
+function createCounter() {
+    let count = 0;
+
+    return function() {
+        count++;
+        return count;
+    }
+}
+
+const counterVariable = createCounter();
+console.log(counterVariable());
+
+function getCookie(name){
+    var pattern = RegExp(name + "=.[^;]*")
+    var matched = document.cookie.match(pattern)
+    if(matched){
+        var cookie = matched[0].split('=')
+        return cookie[1]
+    }
+    return false
+}
+
+function delete_cookie( name, path, domain ) {
+    if( getCookie( name ) ) {
+      document.cookie = name + "=" +
+        ((path) ? ";path="+path:"")+
+        ((domain)?";domain="+domain:"") +
+        ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    }
+  }
