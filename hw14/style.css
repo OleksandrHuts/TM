@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://img.freepik.com/free-photo/sun-rays-cloudy-sky_23-2148824930.jpg?semt=ais_hybrid);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.wrapper {
+    margin: 0 auto;
+    margin-top: 100px;
+   width: 400px;
+   height: 600px;
+   background-color: rgb(213, 209, 209);
+   border-radius: 10%;
+}
+.wrapper_input {
+  margin-top: 50px;
+  margin-left: 60px;
+    width: 70%;
+    height: 40px;
+    border: 1px solid #0b0909;
+  
+}
