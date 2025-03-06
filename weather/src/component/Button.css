@@ -1,0 +1,16 @@
+.btn {
+    background-color: coral;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.btn.button_search {
+    background-color: lightskyblue;
+}
