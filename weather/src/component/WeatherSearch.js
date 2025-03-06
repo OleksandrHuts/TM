@@ -43,7 +43,7 @@ export default function WeatherSearch() {
                  const {main, wind} = res;
 
 
-                return(
+               let wet = `
                 <>
 
                     <div className="feel">
@@ -58,7 +58,8 @@ export default function WeatherSearch() {
                         <div className="humidity">${main.humidity}%</div>
                     </div>
                 </>
-                )
+                `
+                return wet;
               }
 
 
