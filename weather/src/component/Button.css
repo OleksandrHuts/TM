@@ -3,7 +3,7 @@
     color: #fff;
     border: none;
     outline: none;
-    font-size: 22px;
+    font-size: 20px;
     padding: 10px 20px;
     cursor: pointer;
     display: flex;
@@ -13,4 +13,5 @@
 }
 .btn.button_search {
     background-color: lightskyblue;
+    font-family: "Roboto", sans-serif;
 }

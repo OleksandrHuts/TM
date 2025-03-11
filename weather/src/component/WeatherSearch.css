@@ -1,0 +1,55 @@
+.container {
+    width: 500px;
+    height: 700px;
+    background-color: lightcyan;
+    border-radius: 7%;
+    margin: 0 auto;
+    border: none;
+
+}
+
+
+
+.container_box {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.feel {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 22px;
+    gap: 10px;
+}
+
+.feel_title {
+    font-weight: 700;
+}
+
+
+.box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.degree_conteiner {
+    padding-top: 30px;
+    padding-bottom: 100px;
+ }
+
+.degree {
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 23px;
+}

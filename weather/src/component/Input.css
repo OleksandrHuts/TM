@@ -2,6 +2,8 @@
     width: 50%;
     padding: 10px;
     box-sizing: border-box;
-    font-size: 44px;
+    font-size: 20px;
     color: lightgrey;
+    border: none;
+    font-family: "Roboto", sans-serif;
 }

@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  padding-top: 120px;
+  
 }
 
 .App-logo {
@@ -42,4 +44,3 @@
   }
 }
 
-.container {}
